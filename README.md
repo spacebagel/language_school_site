@@ -5,7 +5,58 @@
 
 ## 📃 Description
 
-> *There will be a description with pictures when I'm done...*
+### *---HTTP requests don't work on modern hosting services, including Github Pages---*
+
+### Main Page
+The main page provides a brief overview of the language school, highlighting the advantages of learning the Russian language. It includes a link to the placement test to assess the user's proficiency in Russian. The page features functional buttons for filtering the list of courses by proficiency level, displaying available courses with options for selection. Additionally, it showcases accessible instructors and includes an interactive map with thematic locations related to Russian language schools.
+
+![Main Page](https://github.com/user-attachments/assets/a46d571f-26b4-46f0-965a-ee14e6cc5c65)
+
+![Main Page](https://github.com/user-attachments/assets/212977ae-33ff-480d-b95c-85894e06735b)
+
+![Main Page](https://github.com/user-attachments/assets/d6407ef5-06fa-47c8-bfcd-6e2b488063d5)
+
+![Main Page](https://github.com/user-attachments/assets/cb28bfba-cb00-48bd-b566-a83dd424653b)
+
+The enrollment form allows users to select a course, along with the desired date and time for their sessions. It dynamically calculates the total cost, taking into account bonuses, additional options, and promotions. 
+
+![Cet Course Form](https://github.com/user-attachments/assets/0dea2953-3c04-41a9-8161-56149b3913ba)
+
+![Send Message Form](https://github.com/user-attachments/assets/fe2a93c8-e00e-46b4-b946-c82af0a0051b)
+
+### Placment Test Page
+The placement test, available in Russian, consists of 15 questions. The answers help determine the user's proficiency level, enabling the system to suggest the most appropriate course based on their skills.
+
+![Placment Test](https://github.com/user-attachments/assets/430ad57e-2221-49d9-9cb6-ff71412cca68)
+
+![Placment Test Result](https://github.com/user-attachments/assets/afe0f395-0557-4479-a4c0-40c984b96b55)
+
+### About Page
+This page introduces the mission, values, and history of RuWave. It highlights the goal of breaking language barriers and making Russian language and culture accessible to learners around the world.
+
+![About Page](https://github.com/user-attachments/assets/6d8a2b26-e8d6-44fc-82a5-4d0a364b7df6)
+
+![About Page](https://github.com/user-attachments/assets/a49bc85c-4e1a-4840-b813-33748424d1e3)
+
+![About Page](https://github.com/user-attachments/assets/469b18a4-015f-4f29-9576-b3fa8a34486f)
+
+### Account Page
+This page is designed to manage course applications and study requests with tutors. It provides an overview of the user's orders, including the course name, session date, total cost, and actions available for each order. Users can view and track their requests, and interact with them by taking actions like modifying or canceling an order.
+
+![Account Page](https://github.com/user-attachments/assets/7f9d0c4a-4e6a-4056-8b8b-eedea5692240)
+
+![Account Page Order Info](https://github.com/user-attachments/assets/2b265001-713a-4711-819b-4d60806c606e)
+
+### Mobile version
+
+![Mobile Version](https://github.com/user-attachments/assets/ac004f0b-bfa7-4f66-8625-ea88d2d5fdf3)
+
+![Mobile Version](https://github.com/user-attachments/assets/f40ae90c-63cd-4c84-8ef0-b592ce25bfd5)
+
+![Mobile Version](https://github.com/user-attachments/assets/37a482b9-5db2-49a8-a20f-71a40f3e7d8d)
+
+![Mobile Version](https://github.com/user-attachments/assets/1f1179d9-cebf-4c00-8741-c6c028cc49ef)
+
 
 ## 💾 Data
 ### Tutor
