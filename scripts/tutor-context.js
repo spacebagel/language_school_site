@@ -1,10 +1,17 @@
 let currentTutorPage = 1;
 const tutorsPerPage = 4;
 
-const tutorGetUrl = 'http://cat-facts-api.std-900.ist.mospolytech.ru/api/tutors?api_key='  + API_KEY;
+//const tutorGetUrl = 'http://cat-facts-api.std-900.ist.mospolytech.ru/api/tutors?api_key='  + API_KEY;
+const tutorGetUrl = 'https://cors-anywhere.herokuapp.com/http://cat-facts-api.std-900.ist.mospolytech.ru/api/tutors?api_key='  + API_KEY;
 
 function fetchTutors() {
-    fetch(tutorGetUrl)
+    fetch(tutorGetUrl, {
+        method: 'GET',
+        headers: {
+            'Origin': 'http://cat-facts-api.std-900.ist.mospolytech.ru',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+        })
         .then(response => response.json())
         .then(data => {
             renderTutors(data);
