@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/account-style.css">
+
+    <link rel="icon" href="../imgs/icons/logo.png">
+    <title>My account | RuWave</title>
+</head>
+
+<body>
+    <header>
+        <div class="subheader-container">
+            <a href="../index.html">
+                <div class="logo-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M20.221 10.761a2.978 2.978 0 0 0-.1-4.121c-.566-.567-1.32-.879-2.121-.879s-1.555.312-2.121.879a1.239 1.239 0 0 1-.879.361c-.333 0-.646-.129-.879-.362C12.755 5.273 10.936 4.521 9 4.521s-3.755.752-5.121 2.118a2.982 2.982 0 0 0-.1 4.122c-.498.551-.779 1.252-.779 2s.281 1.448.779 2a2.978 2.978 0 0 0 .1 4.121c.566.566 1.32.879 2.121.879s1.555-.312 2.121-.879c.234-.233.545-.362.878-.362c.333 0 .646.129.88.363A7.199 7.199 0 0 0 15 21a7.192 7.192 0 0 0 5.121-2.118a2.98 2.98 0 0 0 .1-4.121c.498-.552.779-1.252.779-2s-.281-1.449-.779-2zm-1.514 6.707A5.227 5.227 0 0 1 15 19a5.23 5.23 0 0 1-3.707-1.532A3.235 3.235 0 0 0 9 16.52c-.831 0-1.661.316-2.292.948a1.001 1.001 0 0 1-1.415-1.414a5.226 5.226 0 0 1 3.706-1.532a5.23 5.23 0 0 1 3.708 1.532a3.233 3.233 0 0 0 2.293.947a3.23 3.23 0 0 0 2.293-.947a.997.997 0 0 1 1.414 0a.999.999 0 0 1 0 1.414zM5.293 8.054A5.225 5.225 0 0 1 9 6.521c1.343 0 2.685.511 3.707 1.532A3.23 3.23 0 0 0 15 9.001a3.23 3.23 0 0 0 2.293-.947a.997.997 0 0 1 1.414 0a.999.999 0 0 1 0 1.414A5.227 5.227 0 0 1 15 11a5.23 5.23 0 0 1-3.707-1.532A3.235 3.235 0 0 0 9 8.52c-.831 0-1.661.316-2.292.948a1.001 1.001 0 0 1-1.415-1.414zm13.414 5.414A5.227 5.227 0 0 1 15 15a5.23 5.23 0 0 1-3.707-1.532A3.235 3.235 0 0 0 9 12.52c-.831 0-1.661.316-2.292.948a1.001 1.001 0 0 1-1.415-1.414a5.226 5.226 0 0 1 3.706-1.532a5.23 5.23 0 0 1 3.708 1.532a3.233 3.233 0 0 0 2.293.947a3.23 3.23 0 0 0 2.293-.947a.997.997 0 0 1 1.414 0a.999.999 0 0 1 0 1.414z" />
+                    </svg>
+                    <p class="logo-text">RuWave</p>
+                </div>
+            </a>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="link-container" id="menu-nav">
+                <a href="../index.html#available-courses-section">Catalog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="account.html">Account</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="text-center">
+            <h2 class="display-4">Welcome back, Username!</h2>
+            <p class="lead">Manage your courses and study requests with a tutor here.</p>
+        </section>
+
+        <section class="notification-area mb-5 p-4 d-flex align-items-center ">
+            <p class="m-0">You have <b>2</b> new study requests!</p>
+        </section>
+
+        <div class="container">
+            <h3 class="mb-4">Your Orders</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Course Name</th>
+                        <th>Session Date</th>
+                        <th>Total Cost</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-table-body">
+                </tbody>
+            </table>
+
+            <div id="pagination-container" class="pagination"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>©2025 RuWave | Vincent Vegan</p>
+            <div class="footer-links-container">
+                <a href="https://github.com/spacebagel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M0 0h24v24H0z" />
+                            <path fill="white"
+                                d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047l.154-.03z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://t.me/pulpvr">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="m15 10l-4 4l6 6l4-16l-18 7l4 2l2 6l3-4" />
+                    </svg>
+                </a>
+                <a href="mailto:me@niimpl.ru">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                        <path fill="white"
+                            d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                </div>
+                <div class="modal-body" id="order-modal-container">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal()" class="main-wave-button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../config.js"></script>
+    <script src="../scripts/account.js"></script>
+</body>
+
+</html>

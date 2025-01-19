@@ -1,0 +1,13 @@
+.social-media-container a {
+    color: var(--main-accent-color);
+}
+
+.social-media-container a:hover {
+    color: var(--accent-hover-color);
+}
+
+.social-media-container a:not(:last-child)::after {
+    content: " • ";
+    color: var(--main-foreground);
+    margin: auto 0.4em;
+}

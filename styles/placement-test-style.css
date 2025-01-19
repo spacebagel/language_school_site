@@ -1,0 +1,103 @@
+:root {
+    --correct-answer-color: green;
+    --incorrect-answer-color: red;
+}
+
+footer {
+    align-items: end;
+}
+
+header {
+    margin-bottom: 0;
+}
+
+footer, header  {
+    flex: 0; 
+}
+
+#question {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.answer-button, #next-question-button, #start-learning-button {
+    height: 3em;
+    border-radius: 8px;
+    color: var(--main-foreground);
+    font-size: 1.2em;
+}
+
+.answer-button {
+    background-color: transparent;
+    border: 2px solid var(--main-foreground);
+    cursor: pointer;
+}
+
+.answer-button:hover {
+    background-color: #e7e7e5;
+}
+
+.test-container {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.correct, .incorrect {
+    color: var(--invert-foreground);
+}
+
+.correct, .correct:hover {
+    background-color: var(--correct-answer-color);
+}
+
+.incorrect, .incorrect:hover {
+    background-color: var(--incorrect-answer-color);
+}
+
+#next-question-button {
+    background-color: transparent;
+    margin: auto 4em;
+    background-color: var(--main-foreground);
+    color: var(--invert-foreground);
+}
+
+#next-question-button:hover {
+    background-color: rgb(59, 59, 59);
+    color: var(--main-accent-color);
+}
+
+#start-learning-button {
+    color: var(--main-foreground);
+    background-color: var(--main-accent-color);
+    border: 3px solid var(--accent-hover-color);
+    font-weight: bold;
+}
+
+#start-learning-button:hover {
+    border-color: var(--main-foreground);
+    color: var(--invert-foreground);
+    background-color: var(--accent-hover-color);
+}
