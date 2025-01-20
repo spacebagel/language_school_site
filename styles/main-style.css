@@ -220,7 +220,11 @@ footer svg {
         margin-bottom: 1em;
     }
     
+    .order-form-button {
+        width: 100%;
+    }
+
     .order-form-submit-button {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
     }
 }

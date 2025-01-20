@@ -27,10 +27,12 @@ function renderOrders(orders) {
 
         const orderNumberCell = document.createElement('td');
         orderNumberCell.textContent = '#' + order.id;
+        orderNumberCell.setAttribute('data-label', 'Order Number');
         row.appendChild(orderNumberCell);
 
         const courseNameCell = document.createElement('td');
         courseNameCell.textContent = 'Loading...'; // Placeholder while fetching course name
+        courseNameCell.setAttribute('data-label', 'Course Name');
         getCourse(order.course_id).then(courseData => {
             const courseName = courseData.name !== 'Course not found' && courseData.name !== 'Error fetching course name' ? courseData.name : 'N/A';
             courseNameCell.textContent = courseName;
@@ -40,10 +42,12 @@ function renderOrders(orders) {
         const sessionDateCell = document.createElement('td');
         const sessionDate = new Date(order.date_start);
         sessionDateCell.textContent = sessionDate.toLocaleDateString();
+        sessionDateCell.setAttribute('data-label', 'Start Date');
         row.appendChild(sessionDateCell);
 
         const totalCostCell = document.createElement('td');
         totalCostCell.textContent = '$' + order.price;
+        totalCostCell.setAttribute('data-label', 'Total Cost');
         row.appendChild(totalCostCell);
 
         const actionsCell = document.createElement('td');
@@ -52,11 +56,13 @@ function renderOrders(orders) {
             <button onclick="getCourseRequest(null, ${JSON.stringify(order).replace(/"/g, '&quot;')}, ${order.course_id})" class="action-btn"><svg class="action-button-svg edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1l1-4l9.5-9.5z"/></g></svg></button>
             <button onclick="deleteOrder(${order.id})" class="action-btn"><svg class="action-button-svg delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"/></svg></button>
         `;
+        actionsCell.setAttribute('data-label', 'Actions');
         row.appendChild(actionsCell);
 
         ordersTableBody.appendChild(row);
     });
 }
+
 
 function setupOrderPagination(orders) {
     const paginationContainer = document.getElementById('pagination-container');

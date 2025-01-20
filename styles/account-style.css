@@ -1,5 +1,6 @@
-footer, header  {
-    flex: 0; 
+footer,
+header {
+    flex: 0;
 }
 
 .notification-area {
@@ -8,7 +9,8 @@ footer, header  {
     border-radius: 8px;
 }
 
-.table th, .table td {
+.table th,
+.table td {
     vertical-align: middle;
 }
 
@@ -45,7 +47,7 @@ footer, header  {
 
 .action-button-svg.edit:hover {
     color: var(--accent-hover-color);
-} 
+}
 
 .action-button-svg.delete:hover {
     color: #b70505;
@@ -57,4 +59,42 @@ footer, header  {
 
 .bonus-label {
     color: var(--main-accent-color);
+}
+
+@media (max-width: 760px) {
+    #pagination-container {
+        margin-bottom: 2em;
+        ;
+    }
+
+    th,
+    td {
+        display: flex;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    tr {
+        border-bottom: 2px solid var(--main-accent-color);
+    }
+
+    td:not(:last-child) {
+        border-bottom: 1px solid var(--main-foreground);
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+    }
 }
