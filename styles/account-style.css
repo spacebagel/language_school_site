@@ -54,3 +54,7 @@ footer, header  {
 .hidden {
     display: none;
 }
+
+.bonus-label {
+    color: var(--main-accent-color);
+}
