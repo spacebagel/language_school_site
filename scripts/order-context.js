@@ -74,7 +74,7 @@ async function getCourseRequest(course = null, orderData = null, courseId = null
                                 <label id="intensiveCourseLabel" class="hidden bonus-label">✓ Intensive Course</label>
                             </div>
                             <div class="container text-center">
-                                <button type="submit" class="main-wave-button">${orderData ? 'Update' : 'Submit'}</button>
+                                <button type="submit" class="order-form-submit-button main-wave-button">${orderData ? 'Update' : 'Submit'}</button>
                                 <button type="button" class="main-wave-button secondary" data-bs-dismiss="modal">Cancel</button>
                             </div>
                         </form>

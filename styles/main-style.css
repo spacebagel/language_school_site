@@ -219,4 +219,8 @@ footer svg {
         font-size: 1.2em;
         margin-bottom: 1em;
     }
+    
+    .order-form-submit-button {
+        margin-bottom: 1em;
+    }
 }
